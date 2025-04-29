@@ -1,0 +1,54 @@
+.terms-and-conditions-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 12px;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  .terms-and-conditions-container h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .terms-and-conditions-container p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+  
+  .terms-list ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  .terms-list li {
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .terms-list li strong {
+    color: #2980b9;
+  }
+  
+  .terms-list li:hover {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .terms-list li a {
+    color: #2980b9;
+    text-decoration: none;
+  }
+  
+  .terms-list li a:hover {
+    text-decoration: underline;
+  }
+  

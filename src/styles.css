@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 40px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    padding: 0;
+    margin: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4caf50;
+}
+
+.nav-links .login,
+.nav-links .signup {
+    color: #fff;
+}
+
+.nav-links .login:hover,
+.nav-links .signup:hover {
+    color: #fff;
+}
+
+.navbar .auth-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar .auth-links a:hover {
+    color: #fff;
+}
+
+.auth-links {
+    display: flex;
+    gap: 10px;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    width: 400px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4b544b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        align-items: flex-start;
+    }
+
+    .nav-links,
+    .auth-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-links {
+        align-items: flex-start;
+    }
+
+    .auth-links {
+        align-items: flex-start;
+    }
+
+    .nav-links a,
+    .auth-links a {
+        font-size: 16px;
+    }
+
+    .popup {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

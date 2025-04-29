@@ -1,0 +1,327 @@
+.cosmetic-home {
+    font-family: 'Playfair Display', serif;
+    color: #2a2a2a;
+    overflow-x: hidden;
+  }
+  
+  /* Luxury Hero Section */
+  .luxury-hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .luxury-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .discover-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .discover-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Beauty Pillars Section */
+  .pillars-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 40px;
+    text-align: center;
+    background: #f9f5f2;
+  }
+  
+  .pillar {
+    max-width: 300px;
+    padding: 0 20px;
+  }
+  
+  .pillar .icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #c8a97e;
+  }
+  
+  .pillar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .pillar p {
+    font-size: 1rem;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Interactive Beauty Tabs */
+  .beauty-tabs {
+    padding: 60px 0;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 20px;
+  }
+  
+  .tab-buttons button {
+    background: none;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    color: #888;
+    font-family: 'Playfair Display', serif;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-buttons button:hover {
+    color: #2a2a2a;
+  }
+  
+  .tab-buttons button.active {
+    color: #2a2a2a;
+    font-weight: 500;
+  }
+  
+  .tab-buttons button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: #c8a97e;
+  }
+  
+  .tab-content {
+    height: 600px;
+    position: relative;
+  }
+  
+  .skincare-showcase,
+  .makeup-showcase,
+  .fragrance-showcase {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .skincare-text,
+  .makeup-text,
+  .fragrance-text {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+    max-width: 500px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+  }
+  
+  .skincare-text h2,
+  .makeup-text h2,
+  .fragrance-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+  
+  .skincare-text p,
+  .makeup-text p,
+  .fragrance-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Editorial Section */
+  .editorial-section {
+    display: flex;
+    height: 600px;
+  }
+  
+  .editorial-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .editorial-content {
+    flex: 1;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f9f5f2;
+  }
+  
+  .editorial-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .editorial-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: #666;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .editorial-btn {
+    align-self: flex-start;
+    background: #c8a97e;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .editorial-btn:hover {
+    background: #b5986e;
+  }
+  
+  /* Instagram Gallery Preview */
+  .gallery-section {
+    padding: 80px 40px;
+    text-align: center;
+  }
+  
+  .gallery-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: 400;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .gallery-item {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .hero-content h1 {
+      font-size: 3.5rem;
+    }
+    
+    .pillars-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+    
+    .editorial-section {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    .editorial-image {
+      height: 400px;
+    }
+    
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+    
+    .tab-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .skincare-text,
+    .makeup-text,
+    .fragrance-text {
+      left: 40px;
+      bottom: 40px;
+      padding: 20px;
+    }
+    
+    .editorial-content {
+      padding: 40px;
+    }
+    
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }

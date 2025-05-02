@@ -1,0 +1,54 @@
+
+:root {
+    --primary-bg-color: #f5f0ec;
+    --primary-color: #cf4262;
+    --primary-hover-color: #b83858;
+    --text-color: #3e3e3e;
+    --subtitle-color: #888;
+    --input-border-color: #ddd;
+    --input-border-radius: 10px;
+    --font-family: 'Poppins', sans-serif;
+    --secondary-bg-color: #f8f9fa;
+}
+
+.about-page {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: var(--secondary-bg-color);
+    font-family: var(--font-family);
+}
+
+.about-title {
+    font-size: 3rem;
+    color: var(--primary-color); /* Updated to match primary theme */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.intro-text {
+    font-size: 1.3rem;
+    color: var(--text-color); /* Updated to match the theme */
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-description,
+.about-mission {
+    font-size: 1.1rem;
+    color: var(--subtitle-color); /* Updated to match the theme */
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.about-image {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.02);
+}

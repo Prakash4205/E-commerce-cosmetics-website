@@ -1,24 +1,17 @@
 import { useState } from 'react';
-import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+
 import './ProductPage.css'
 
+
 function ProductPage({ addToCart }) {
-  const navigate = useNavigate();
+  const [searchTerm, setSearchTerm] = useState('');
 
-    useEffect(() => {
-        const isLoggedIn = localStorage.getItem('isLoggedIn');
-        if (!isLoggedIn) {
-            navigate('/login');
-        }
-    }, [navigate]);
-    const handleAddToCart = (product) => {
-      addToCart(product); 
-      alert(`${product.name} has been added to your cart!`);
-    };
-    
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    alert(`${product.name} has been added to your cart!`);
+  };
 
-    const [products] = useState([
+  const [products] = useState([
     { id: 1, name: 'La Mousse Cleanser', brand: 'Chanel', price: 500,img: 'data:image/jpeg;base64,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' },
     { id: 2, name: 'Serum De Beaute', brand: 'Gucci', price: 790, img: 'https://www.kunchals.in/cdn/shop/files/u_3616302937004_01.jpg?v=1735910822' },
     { id: 3, name: 'Powermatte Lipstick', brand: 'NARS', price: 500, img: 'https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/products/pictures/item/free/original/000000000494284515/Y_ccWiDA0t-000000000494284515_1.png' },
@@ -31,25 +24,43 @@ function ProductPage({ addToCart }) {
     { id: 10, name: 'City Stroke Eyeliner', brand: 'Mars', price: 200, img: 'https://images.meesho.com/images/products/398163636/kriok_1200.jpg' }
   ]);
     
+
+
+  const filteredProducts = products.filter(product =>
+    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    product.brand.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="product-page">
       <div className="product-header">
         <h1>Explore Our Shop</h1>
         <p>Discover luxury cosmetics crafted for your beauty and skincare needs.</p>
+        <input
+          type="text"
+          placeholder="Search products..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-bar"
+        />
       </div>
 
       <div className="product-grid">
-        {products.map(product => (
-          <div className="product-card" key={product.id}>
-            <img src={product.img} alt={product.name} className="product-image" />
-            <h3 className="product-name">{product.name}</h3>
-            <p className="product-brand">{product.brand}</p>
-            <p className="product-price">Rs.{product.price.toFixed(2)}</p>
-            <button className="add-to-cart" onClick={() => handleAddToCart(product)}>
-              Add to Cart
-            </button>
-          </div>
-        ))}
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map(product => (
+            <div className="product-card" key={product.id}>
+              <img src={product.img} alt={product.name} className="product-image" />
+              <h3 className="product-name">{product.name}</h3>
+              <p className="product-brand">{product.brand}</p>
+              <p className="product-price">Rs.{product.price.toFixed(2)}</p>
+              <button className="add-to-cart" onClick={() => handleAddToCart(product)}>
+                Add to Cart
+              </button>
+            </div>
+          ))
+        ) : (
+          <p>No products found.</p>
+        )}
       </div>
     </div>
   );

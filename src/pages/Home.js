@@ -4,7 +4,6 @@ import './Home.css';
 function Home() {
   const [activeTab, setActiveTab] = useState('skincare');
 
-  // Image URLs from Unsplash (free high-quality images)
   const images = {
     heroBg: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     skincare: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
@@ -66,13 +65,14 @@ function Home() {
             Scent Symphony
           </button>
         </div>
-        
+
         <div className="tab-content">
           {activeTab === 'skincare' && (
             <div className="skincare-showcase" style={{ backgroundImage: `url(${images.skincare})` }}>
               <div className="skincare-text">
                 <h2>Skin Transcendence</h2>
                 <p>Our biotech formulas work at cellular level to reveal your most luminous skin</p>
+                <button className="shop-btn">Shop Skincare</button>
               </div>
             </div>
           )}
@@ -81,6 +81,7 @@ function Home() {
               <div className="makeup-text">
                 <h2>Color as Self-Expression</h2>
                 <p>Pigments that enhance rather than mask your natural beauty</p>
+                <button className="shop-btn">Shop Makeup</button>
               </div>
             </div>
           )}
@@ -89,6 +90,7 @@ function Home() {
               <div className="fragrance-text">
                 <h2>Olfactory Poetry</h2>
                 <p>Perfumes that evolve with your chemistry to create a signature scent</p>
+                <button className="shop-btn">Shop Fragrance</button>
               </div>
             </div>
           )}

@@ -1,200 +1,200 @@
 /* Base styling */
 .cart-page {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-  }
-  
-  .cart-heading {
-    text-align: center;
-    font-size: 2.8rem;
-    margin-bottom: 40px;
-    font-weight: 600;
-    color: #1a1a1a;
-  }
-  
-  .empty-message {
-    text-align: center;
-    font-size: 1.3rem;
-    color: #888;
-    margin-top: 40px;
-  }
-  
-  .cart-items-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f0ec; /* Background color from theme */
+  color: #3e3e3e; /* Primary text color from theme */
+}
+
+.cart-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #3e3e3e; /* Primary heading color from theme */
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #888;
+  margin-top: 40px;
+}
+
+.cart-items-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 24px;
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.cart-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.item-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  align-self: center;
+}
+
+.item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.item-details h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3e3e3e; /* Heading color from theme */
+  margin: 0;
+}
+
+.item-details p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 10px 0;
+  color: #888; /* Secondary text color from theme */
+}
+
+/* Quantity */
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  justify-content: center;
+}
+
+.quantity-controls button {
+  padding: 6px 18px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  background-color: #e4e6eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quantity-controls button:hover:not(:disabled) {
+  background-color: #cfd2d6;
+}
+
+.quantity-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.quantity-controls span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* Remove button */
+.remove-btn {
+  background-color: #ff4d4f;
+  border: none;
+  padding: 10px 16px;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: center;
+  transition: background-color 0.2s ease;
+}
+
+.remove-btn:hover {
+  background-color: #d9363e;
+}
+
+.summary-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased space between buttons */
+}
+
+
+.summary-btn {
+  padding: 12px 24px; /* Reduced padding for smaller buttons */
+  font-size: 1rem; /* Smaller font size */
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+ /* Make buttons take up half of the container width */
+}
+
+.summary-btn.checkout {
+  background-color: #cf4262; /* Primary button color from theme */
+  color: #fff;
+}
+
+.summary-btn.checkout:hover {
+  background-color: #b83858;
+  transform: scale(1.05);
+}
+
+.summary-btn.clear {
+  background-color: #ffc107;
+  color: #333;
+  margin-top: 20px;
+}
+
+.summary-btn.clear:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+.total {
+  font-size: 2rem;
+  margin: 24px 0;
+  font-weight: 600;
+  color: #3e3e3e; /* Heading color from theme */
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .cart-item {
-    display: flex;
-    gap: 24px;
-    background: #fff;
-    padding: 20px 24px;
-    border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.3s ease;
     flex-direction: column;
-    align-items: flex-start; /* Changed to flex-start (not left) */
-    margin-bottom: 20px;
-
-  }
-  
-  .cart-item:hover {
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  
-  .item-img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    align-self: center;
-
-  }
-  
-  .item-details {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-self: center;
-  }
-  
-  .item-details h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #222;
-    margin: 0;
-  }
-  
-  .item-details p {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 10px 0;
-    color: #444;
-  }
-  
-  /* Quantity */
-  .quantity-controls {
-    display: flex;
     align-items: center;
-    gap: 12px;
-    margin: 12px 0;
-    justify-content: center;
-  }
-  
-  .quantity-controls button {
-    padding: 6px 18px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    border: none;
-    background-color: #e4e6eb;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .quantity-controls button:hover:not(:disabled) {
-    background-color: #cfd2d6;
-  }
-  
-  .quantity-controls button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  .quantity-controls span {
-    font-size: 1.2rem;
-    font-weight: bold;
-    min-width: 30px;
     text-align: center;
   }
-  
-  /* Remove button */
-  .remove-btn {
-    background-color: #ff4d4f;
-    border: none;
-    padding: 10px 16px;
-    color: white;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    align-self: center;
-    transition: background-color 0.2s ease;
+
+  .item-img {
+    width: 120px;
+    height: 120px;
   }
-  
-  .remove-btn:hover {
-    background-color: #d9363e;
+
+  .item-details {
+    align-items: center;
   }
-  
-  /* Summary */
-  .summary-wrapper {
-    margin-top: 50px;
-    text-align: center;
-  }
-  
+
   .summary-btn {
-    padding: 16px 36px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 10px;
-    margin: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 80%;
   }
-  
-  .summary-btn.checkout {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .summary-btn.checkout:hover {
-    background-color: #0069d9;
-    transform: scale(1.05);
-  }
-  
-  .summary-btn.clear {
-    background-color: #ffc107;
-    color: #333;
-  }
-  
-  .summary-btn.clear:hover {
-    background-color: #e0a800;
-    transform: scale(1.05);
-  }
-  
-  .total {
-    font-size: 2rem;
-    margin: 24px 0;
-    font-weight: 600;
-    color: #111;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .cart-item {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .item-img {
-      width: 120px;
-      height: 120px;
-    }
-  
-    .item-details {
-      align-items: center;
-    }
-  
-    .summary-btn {
-      width: 80%;
-    }
-  }
-  
+}

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./Cart.css";
 
-function Cart({ cart, removeFromCart, clearCart }) {
+function Cart({ cart, removeFromCart, clearCart, user }) {
   const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
 
@@ -13,15 +13,13 @@ function Cart({ cart, removeFromCart, clearCart }) {
     } else {
       setCartItems(cart); 
     }
-  }, []);
+  }, [cart]);
 
- 
   useEffect(() => {
     if (cart && cart.length > 0) {
       setCartItems(cart);
     }
   }, [cart]);
-
 
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
@@ -33,8 +31,8 @@ function Cart({ cart, removeFromCart, clearCart }) {
   );
 
   const handleCheckout = () => {
-    navigate("/bill", { state: { cart: cartItems, totalAmount } });
-  };
+      navigate("/bill", { state: { cart: cartItems, totalAmount } });
+    };
 
   const handleIncrement = (itemId) => {
     updateQuantity(itemId, 1);
@@ -56,7 +54,7 @@ function Cart({ cart, removeFromCart, clearCart }) {
   const handleRemove = (itemId) => {
     const updatedCart = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCart);
-    removeFromCart(itemId); 
+    removeFromCart(itemId);
   };
 
   const handleClearCart = () => {

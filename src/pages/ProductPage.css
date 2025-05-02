@@ -1,11 +1,15 @@
 .product-page {
     padding: 50px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f0ec;
+    color: #3e3e3e;
 }
+
 .product-page p {
     font-size: 16px;
-    color: black;
     font-weight: bold;
     margin-top: 10px;
+    color: #3e3e3e;
 }
 
 .product-header {
@@ -14,13 +18,15 @@
 }
 
 .product-header h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 10px;
+    color: #cf4262;
+    font-weight: 600;
 }
 
 .product-header p {
     color: #777;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .product-grid {
@@ -30,16 +36,21 @@
 }
 
 .product-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Makes sure space is pushed */
+    height: 100%; /* Ensure full height */
 }
 
 .product-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
@@ -47,34 +58,40 @@
     height: 120px;
     object-fit: contain;
     margin-bottom: 15px;
+    align-self: center;
 }
 
 .product-name {
-    font-size: 18px;
+    font-size: 1.2rem;
     font-weight: 600;
+    color: #3e3e3e;
 }
 
 .product-brand {
     color: #888;
-    font-size: 14px;
+    font-size: 0.9rem;
 }
 
 .product-price {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #222;
+    font-weight: 500;
 }
 
 .add-to-cart {
-    background-color: #4caf50;
+    background-color: #cf4262;
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s ease;
     margin-top: 10px;
 }
 
 .add-to-cart:hover {
-    background-color: #45a049;
+    background-color: #b83858;
 }

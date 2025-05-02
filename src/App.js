@@ -12,7 +12,7 @@ import ProductPage from './pages/ProductPage';
 import Cart from './pages/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Bill from './pages/Bill';
-import About from './pages/About';
+import About from './pages/AboutPage';
 import FAQ from './pages/FAQ';
 import TermsConditions from './pages/TermsConditionsPage';
 import './styles.css'

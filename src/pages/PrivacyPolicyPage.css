@@ -1,45 +1,98 @@
+/* Container for the Privacy Policy page */
 .privacy-policy-container {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 12px;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  .privacy-policy-container h1 {
-    font-size: 2.8rem;
-    text-align: center;
-    color: #2c3e50;
-    margin-bottom: 20px;
-  }
-  
-  .privacy-policy-container p {
-    font-size: 1.05rem;
-    margin-bottom: 20px;
-  }
-  
-  .policy-section {
-    margin-bottom: 30px;
-  }
-  
-  .policy-section h2 {
-    font-size: 1.5rem;
-    color: #34495e;
-    margin-bottom: 10px;
-    border-left: 4px solid #3498db;
-    padding-left: 10px;
-  }
-  
-  .policy-section a {
-    color: #2980b9;
-    text-decoration: none;
-  }
-  
-  .policy-section a:hover {
-    text-decoration: underline;
-  }
-  
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #ffffff; /* White background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow for the card */
+  font-family: 'Poppins', sans-serif; /* Font family from your theme */
+  border-radius: 20px; /* Rounded corners */
+  color: #3e3e3e; /* Dark gray text color */
+  line-height: 1.6; /* Better line spacing */
+}
+
+/* Main heading for Privacy Policy */
+.privacy-policy-container h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  color: #3e3e3e; /* Consistent with the theme */
+  margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+.privacy-policy-container p {
+  font-size: 1.05rem;
+  color: #888; /* Light gray for normal text */
+  margin-bottom: 20px;
+}
+
+/* Individual sections for privacy policy */
+.policy-section {
+  margin-bottom: 30px;
+  border-left: 4px solid #cf4262; /* Accent border */
+  padding-left: 10px;
+}
+
+/* Section heading (h2) with interactive toggle */
+.policy-section h2 {
+  font-size: 1.5rem;
+  color: #3e3e3e; /* Dark gray for headings */
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f5f0ec; /* Light background similar to your login page */
+  border-radius: 8px;
+  transition: background 0.3s ease; /* Smooth hover effect */
+}
+
+/* Section heading hover effect */
+.policy-section h2:hover {
+  background-color: #eaf2f8; /* Slightly darker shade on hover */
+}
+
+/* Toggle icon (plus or minus) */
+.toggle-icon {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #cf4262; /* Red accent color */
+}
+
+/* Paragraphs inside policy sections */
+.policy-section p {
+  font-size: 1.05rem;
+  margin-top: 10px;
+  color: #555; /* Slightly darker gray for content */
+}
+
+/* Links in the policy content */
+.policy-section a {
+  color: #cf4262; /* Matching the red accent */
+  text-decoration: none;
+}
+
+/* Hover effect for links */
+.policy-section a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Add a "Go Back" button at the end */
+.go-back-button {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #cf4262;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cf4262;
+  transition: background 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #cf4262;
+  color: white;
+}

@@ -1,40 +1,42 @@
-/* FAQPage.css */
-
+/* Global styles */
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ffffff, #cfdef3);
+  background-color: #f5f0ec; /* Light beige background to match the theme */
   min-height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Poppins", sans-serif; /* Font family consistent with your theme */
 }
 
+/* FAQ page container */
 .faq-page {
   max-width: 900px;
   margin: 80px auto;
   padding: 40px;
   backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.75);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75); /* White background with slight transparency */
+  border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Heading of the FAQ page */
 .faq-page h1 {
   text-align: center;
   font-size: 3rem;
-  background: linear-gradient(45deg, #007cf0, #00dfd8);
-  -webkit-background-clip: text;
+  background: linear-gradient(45deg, #cf4262, #cf7d93); /* Royal theme gradient */
   -webkit-text-fill-color: transparent;
   font-weight: 800;
   margin-bottom: 50px;
 }
 
+/* FAQ list container */
 .faq-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* Individual FAQ item */
 .faq-item {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 12px;
@@ -44,42 +46,50 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect for FAQ item */
 .faq-item:hover {
   transform: scale(1.01);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
+/* FAQ question section */
 .faq-question {
   padding: 18px 24px;
   font-weight: 600;
   font-size: 1.2rem;
-  color: #333;
+  color: #3e3e3e; /* Dark text color */
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
   transition: background 0.3s ease;
+  background-color: #f5f0ec; /* Matching the page background color */
+  border-bottom: 1px solid #ddd; /* Bottom border for separation */
 }
 
+/* Hover effect for FAQ question */
 .faq-question:hover {
-  background: #f0f4ff;
+  background: #f0f4ff; /* Light blue on hover */
 }
 
+/* Arrow icon for expanding/collapsing */
 .arrow {
   font-size: 1.5rem;
   transition: transform 0.3s ease;
-  color: #007cf0;
+  color: #cf4262; /* Accent red color for arrow */
 }
 
+/* Rotated arrow when the item is open */
 .arrow.open {
   transform: rotate(180deg);
 }
 
+/* FAQ answer section */
 .faq-answer {
   padding: 0 24px;
   font-size: 1rem;
-  color: #555;
-  background-color: #fafbfc;
+  color: #555; /* Slightly lighter text color for the answer */
+  background-color: #fafbfc; /* Light gray background for answers */
   max-height: 0;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -88,9 +98,10 @@ body {
   border-top: 1px solid #eee;
 }
 
+/* Display answer when the item is open */
 .faq-answer.show {
   padding: 16px 24px;
-  max-height: 500px; /* arbitrarily large to accommodate content */
+  max-height: 500px; /* Arbitrarily large to accommodate content */
   opacity: 1;
   transform: translateY(0);
 }
